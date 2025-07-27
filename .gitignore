@@ -1,0 +1,36 @@
+# Xcode
+build/
+DerivedData/
+*.xcworkspace
+!default.xcworkspace
+*.xcuserdata
+*.xcodeproj/project.xcworkspace/
+xcuserdata/
+
+
+# Swift Package Manager
+.swiftpm
+Package.resolved
+
+# fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+
+# Firebase config (never check your real plist)
+*/GoogleService-Info.plist
+
+*/Info.plist
+
+# macOS
+.DS_Store
+
+
+# mint
+mint/
+
+# Bundler
+.bundle/
+
+# Archives
+*.xcarchive

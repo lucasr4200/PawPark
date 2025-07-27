@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		27F8497C2E2D721F00A745F6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 27F8497B2E2D721F00A745F6 /* FirebaseAuth */; };
+		27F8497E2E2D721F00A745F6 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 27F8497D2E2D721F00A745F6 /* FirebaseFirestore */; };
+		27F849802E2D721F00A745F6 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 27F8497F2E2D721F00A745F6 /* FirebaseStorage */; };
+		27F849822E2D73FF00A745F6 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 27F849812E2D73FF00A745F6 /* FirebaseRemoteConfig */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		27F8495E2E2D6D6300A745F6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,9 +36,22 @@
 		27F849672E2D6D6300A745F6 /* PawParkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PawParkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		27F849AD2E2F143A00A745F6 /* Exceptions for "PawPark" folder in "PawPark" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 27F8494F2E2D6D6100A745F6 /* PawPark */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		27F849522E2D6D6100A745F6 /* PawPark */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				27F849AD2E2F143A00A745F6 /* Exceptions for "PawPark" folder in "PawPark" target */,
+			);
 			path = PawPark;
 			sourceTree = "<group>";
 		};
@@ -52,6 +72,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F8497C2E2D721F00A745F6 /* FirebaseAuth in Frameworks */,
+				27F8497E2E2D721F00A745F6 /* FirebaseFirestore in Frameworks */,
+				27F849802E2D721F00A745F6 /* FirebaseStorage in Frameworks */,
+				27F849822E2D73FF00A745F6 /* FirebaseRemoteConfig in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +136,10 @@
 			);
 			name = PawPark;
 			packageProductDependencies = (
+				27F8497B2E2D721F00A745F6 /* FirebaseAuth */,
+				27F8497D2E2D721F00A745F6 /* FirebaseFirestore */,
+				27F8497F2E2D721F00A745F6 /* FirebaseStorage */,
+				27F849812E2D73FF00A745F6 /* FirebaseRemoteConfig */,
 			);
 			productName = PawPark;
 			productReference = 27F849502E2D6D6100A745F6 /* PawPark.app */;
@@ -195,6 +223,9 @@
 			);
 			mainGroup = 27F849472E2D6D6100A745F6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				27F8497A2E2D721F00A745F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 27F849512E2D6D6100A745F6 /* Products */;
 			projectDirPath = "";
@@ -395,11 +426,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PawPark/PawPark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79VMFGGZU8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PawPark/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use your camera to scan QRCodes of your friends!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you parks near you!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -423,11 +458,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PawPark/PawPark.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79VMFGGZU8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PawPark/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "We use your camera to scan QRCodes of your friends!";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We use your location to show you parks near you!";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -558,6 +597,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27F8497A2E2D721F00A745F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27F8497B2E2D721F00A745F6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27F8497A2E2D721F00A745F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		27F8497D2E2D721F00A745F6 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27F8497A2E2D721F00A745F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		27F8497F2E2D721F00A745F6 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27F8497A2E2D721F00A745F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		27F849812E2D73FF00A745F6 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27F8497A2E2D721F00A745F6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27F849482E2D6D6100A745F6 /* Project object */;
 }

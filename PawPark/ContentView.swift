@@ -2,23 +2,25 @@
 //  ContentView.swift
 //  PawPark
 //
-//  Created by Lucas Rasmusson on 2025-07-20.
+//  Created by Lucas Rasmusson on 2025-07-21.
 //
 
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    @EnvironmentObject var authVM: AuthViewModel
 
-#Preview {
-    ContentView()
+    var body: some View {
+        ZStack {
+            Color.bgPrimary.ignoresSafeArea()
+            
+            if authVM.user != nil {
+                // User is signed in (Apple or guest)
+                HomeView()        // ← your draggable slider UI
+            } else {
+                // No user: show sign-in screen
+                SignInView()
+            }
+        }
+    }
 }
